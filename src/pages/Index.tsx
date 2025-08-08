@@ -39,7 +39,7 @@ const features = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-hero-gradient">
-      <header className="container py-6">
+      <header className="container py-4">
         <nav className="flex items-center justify-between rounded-2xl bg-background/80 backdrop-blur border px-4 py-2">
           <Link to="/" className="flex items-center gap-2" aria-label="Vidyasphere Home">
             <span className="inline-flex items-center justify-center size-9 rounded-xl bg-primary/15">
@@ -73,7 +73,7 @@ const Index = () => {
       </header>
 
       <main>
-        <section className="container py-16 md:py-24">
+        <section className="container py-12 md:py-16">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-4xl md:text-6xl font-extrabold leading-tight text-foreground">
               Welcome to <span className="text-brand-accent">Vidyasphere</span>
@@ -87,7 +87,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="container pb-20">
+        <section className="container pb-16">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {features.map(({ title, desc, Icon }) => (
               <Card key={title} className="rounded-2xl shadow-md">
@@ -107,7 +107,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="about" className="container py-20">
+        <section id="about" className="container py-16">
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <article>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
@@ -149,7 +149,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="contact" className="container pb-24">
+        <section id="contact" className="container pb-20">
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl">Contact Vidyasphere</CardTitle>
