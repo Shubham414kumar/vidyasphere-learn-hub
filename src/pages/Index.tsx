@@ -47,6 +47,7 @@ const Index = () => {
           <div className="hidden md:flex items-center gap-4">
             {[
               { label: "Home", to: "/" },
+              { label: "About", to: "#about" },
               { label: "Batches", to: "#" },
               { label: "Notes", to: "#" },
               { label: "PYQ", to: "#" },
