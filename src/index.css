@@ -53,6 +53,11 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand tokens */
+    --brand-start: 210 90% 55%; /* blue */
+    --brand-end: 160 84% 45%;   /* green */
+    --brand-accent: 48 96% 53%; /* yellow */
   }
 
   .dark {
@@ -91,6 +96,11 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand tokens (dark) */
+    --brand-start: 210 80% 45%;
+    --brand-end: 160 70% 35%;
+    --brand-accent: 48 96% 55%;
   }
 }
 
@@ -101,5 +111,12 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Hero gradient using semantic brand tokens */
+  .bg-hero-gradient {
+    background-image: linear-gradient(135deg, hsl(var(--brand-start)) 0%, hsl(var(--brand-end)) 100%);
   }
 }
