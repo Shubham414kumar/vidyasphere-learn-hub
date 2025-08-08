@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, FileText, Users, CalendarCheck, Upload, GraduationCap } from "lucide-react";
+import { BookOpen, FileText, Users, CalendarCheck, Upload, GraduationCap, Menu } from "lucide-react";
 
 const features = [
   {
@@ -40,8 +40,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-hero-gradient">
       <header className="container py-6">
-        <nav className="flex items-center justify-between">
+        <nav className="flex items-center justify-between rounded-2xl bg-background/80 backdrop-blur border px-4 py-2">
           <Link to="/" className="flex items-center gap-2" aria-label="Vidyasphere Home">
+            <span className="inline-flex items-center justify-center size-9 rounded-xl bg-primary/15">
+              <GraduationCap className="size-5 text-primary" aria-hidden="true" />
+            </span>
             <span className="text-2xl font-bold tracking-tight text-foreground">Vidyasphere</span>
           </Link>
           <div className="hidden md:flex items-center gap-4">
@@ -62,23 +65,24 @@ const Index = () => {
           <div className="flex items-center gap-2">
             <Button variant="outline" className="rounded-full">Login</Button>
             <Button className="rounded-full">Sign Up</Button>
-            <Button variant="secondary" className="rounded-full">Donate</Button>
+            <Button variant="outline" size="icon" className="rounded-full" aria-label="Open menu">
+              <Menu className="size-4" />
+            </Button>
           </div>
         </nav>
       </header>
 
       <main>
         <section className="container py-16 md:py-24">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-4xl md:text-6xl font-extrabold leading-tight text-foreground">
               Welcome to <span className="text-brand-accent">Vidyasphere</span>
             </h1>
             <p className="mt-4 text-lg md:text-xl text-foreground/90 max-w-2xl">
               A modern, minimal and professional learning platform for Engineering, 10th, and 12th students — with special focus on BEU Patna.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Button size="lg" className="rounded-full">Get Started</Button>
-              <Button size="lg" variant="outline" className="rounded-full">Explore Batches</Button>
+            <div className="mt-6 flex justify-center">
+              <Button size="lg" className="rounded-full">Explore Batches</Button>
             </div>
           </div>
         </section>
@@ -86,10 +90,10 @@ const Index = () => {
         <section className="container pb-20">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {features.map(({ title, desc, Icon }) => (
-              <Card key={title}>
+              <Card key={title} className="rounded-2xl shadow-md">
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <div className="size-10 rounded-full bg-secondary flex items-center justify-center">
+                    <div className="size-10 rounded-xl bg-secondary/60 flex items-center justify-center">
                       <Icon className="size-5 text-foreground" aria-hidden="true" />
                     </div>
                     <CardTitle className="text-lg">{title}</CardTitle>
