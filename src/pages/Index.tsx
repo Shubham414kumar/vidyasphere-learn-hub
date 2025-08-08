@@ -51,7 +51,7 @@ const Index = () => {
               { label: "Notes", to: "#" },
               { label: "PYQ", to: "#" },
               { label: "Attendance", to: "#" },
-              { label: "Contact", to: "#" },
+              { label: "Contact", to: "#contact" },
             ].map((item) => (
               <Link key={item.label} to={item.to} className="text-sm px-3 py-2 rounded-full text-foreground/90 hover:text-foreground transition-colors">
                 {item.label}
@@ -100,6 +100,69 @@ const Index = () => {
               </Card>
             ))}
           </div>
+        </section>
+
+        <section id="about" className="container py-20">
+          <div className="grid gap-8 md:grid-cols-2 items-center">
+            <article>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+                About Vidyasphere
+              </h2>
+              <p className="mt-4 text-base text-muted-foreground">
+                Vidyasphere is a modern, minimal, and professional learning platform built
+                for Engineering, 10th, and 12th students — with a special focus on BEU Patna learners.
+                Learn with curated notes, PYQs, and guided batches designed for real results.
+              </p>
+              <ul className="mt-6 grid gap-3">
+                <li className="flex items-center gap-2">
+                  <span className="inline-block size-2 rounded-full bg-primary" aria-hidden="true" />
+                  <span className="text-foreground/90">Engineering, 10th & 12th focused resources</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="inline-block size-2 rounded-full bg-primary" aria-hidden="true" />
+                  <span className="text-foreground/90">BEU Patna aligned content and guidance</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="inline-block size-2 rounded-full bg-primary" aria-hidden="true" />
+                  <span className="text-foreground/90">Mentor-led batches and practice PYQs</span>
+                </li>
+              </ul>
+            </article>
+            <aside>
+              <Card className="h-full">
+                <CardHeader>
+                  <CardTitle className="text-lg">Our Mission</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Empower every learner with simple, high‑quality resources and structured
+                    learning paths—accessible anywhere, on any device.
+                  </p>
+                </CardContent>
+              </Card>
+            </aside>
+          </div>
+        </section>
+
+        <section id="contact" className="container pb-24">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl">Contact Vidyasphere</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Have questions or suggestions? We’d love to hear from you.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="mailto:hello@vidyasphere.app" aria-label="Email Vidyasphere">
+                  <Button className="rounded-full">Email Us</Button>
+                </a>
+                <a href="#about" aria-label="Learn more about Vidyasphere">
+                  <Button variant="outline" className="rounded-full">Learn More</Button>
+                </a>
+              </div>
+            </CardContent>
+          </Card>
         </section>
       </main>
     </div>
